@@ -57,7 +57,7 @@ export const Main = () => {
                   F
                 </li>
                 <li className='black-keys left-[90px] sm:left-[120px]'>
-                  E
+                  T
                 </li>
                 <li className='white-keys border border-gray-100 w-[10%]'>
                   G
@@ -78,13 +78,13 @@ export const Main = () => {
                   K
                 </li>
                 <li className='black-keys left-[186px] sm:left-[248px]'>
-                  I
+                  O
                 </li>
                 <li className='white-keys border border-gray-100 w-[10%]'>
                   L
                 </li>
                 <li className='black-keys left-[210px] sm:left-[280px]'>
-                  O
+                  P
                 </li>
                 <li className='white-keys border border-gray-100 w-[10%]'>
                   Ç
