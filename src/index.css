@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .black-keys {
+    @apply  h-2/4 absolute w-3 sm:w-4 bg-black z-20 text-xs text-slate-400
+  }
+  .white-keys {
+    @apply flex flex-col justify-end h-full text-xs text-slate-400 
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

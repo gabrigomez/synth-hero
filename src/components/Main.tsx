@@ -35,55 +35,55 @@ export const Main = () => {
           <div className='flex justify-center w-full h-2/4'>
             <div className='flex items-center justify-center bg-black rounded-md w-full h-full'>
               <ul className='flex relative bg-white w-10/12 h-5/6'>
-                <li className='flex flex-col justify-end w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys w-[10%]'>
                   A
                 </li>                
-                <li className='h-2/4 absolute left-[18px] w-3 sm:left-[24px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[18px] sm:left-[24px]'>
                   W
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   S
                 </li>
-                <li className='h-2/4 absolute left-[42px] w-3 sm:left-[56px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[42px] sm:left-[56px]'>
                   E
                 </li>                
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   D
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   F
                 </li>
-                <li className='h-2/4 absolute left-[90px] w-3 sm:left-[120px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[90px] sm:left-[120px]'>
                   E
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   G
                 </li>
-                <li className='h-2/4 absolute left-[114px] w-3 sm:left-[152px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[114px] sm:left-[152px]'>
                   Y
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   H
                 </li>
-                <li className='h-2/4 absolute left-[138px] w-3 sm:left-[184px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[138px] sm:left-[184px]'>
                   U
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   J
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   K
                 </li>
-                <li className='h-2/4 absolute left-[186px] w-3 sm:left-[248px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[186px] sm:left-[248px]'>
                   I
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   L
                 </li>
-                <li className='h-2/4 absolute left-[210px] w-3 sm:left-[280px] sm:w-4 bg-black z-20 text-xs text-slate-400'>
+                <li className='black-keys left-[210px] sm:left-[280px]'>
                   O
                 </li>
-                <li className='flex flex-col justify-end border border-gray-100 w-[10%] h-full text-xs text-slate-400'>
+                <li className='white-keys border border-gray-100 w-[10%]'>
                   Ç
                 </li>
               </ul>
