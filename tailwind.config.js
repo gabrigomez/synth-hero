@@ -7,7 +7,11 @@ module.exports = {
     screens: {
       'sm': '400px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sedgwick': ['Sedgwick Ave Display', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }

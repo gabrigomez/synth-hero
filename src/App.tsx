@@ -4,7 +4,7 @@ import { Main } from './components/Main';
 
 function App() {
   return (
-    <div className="App bg-gradient-to-b from-cyan-100 to-slate-100 h-screen">
+    <div className="App bg-gradient-to-t from-blue-900 to-slate-100 h-screen">
       <Main />
     </div>
   );

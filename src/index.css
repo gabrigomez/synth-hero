@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+
 @layer components {
   .black-keys {
-    @apply  h-2/4 absolute w-3 sm:w-4 bg-black z-20 text-xs text-slate-400
+    @apply  h-2/4 absolute w-3 sm:w-4 bg-black z-20 text-xs text-slate-400 cursor-pointer hover:bg-gray-800 duration-300
   }
   .white-keys {
-    @apply flex flex-col justify-end h-full text-xs text-slate-400 
+    @apply flex flex-col justify-end h-full text-xs text-slate-400 cursor-pointer hover:bg-slate-100 duration-300
   }
 }
 

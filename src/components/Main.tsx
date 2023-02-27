@@ -6,7 +6,7 @@ import { FaGuitar } from "react-icons/fa";
 export const Main = () => {
   return (
     <div className='flex flex-col h-2/4 justify-around items-center'>
-      <div>
+      <div className='font-sedgwick text-6xl'>
         Synth Hero
       </div>
       <div className='bg-zinc-800 h-56 w-72 sm:w-96 rounded-xl'>
@@ -14,7 +14,7 @@ export const Main = () => {
         <div className='flex flex-col h-[200px]'>
           <div className='flex h-2/4 p-2 w-full'>
             <div className='flex items-center justify-center w-1/4'>
-              <div className='border-2 border-black bg-zinc-600 rounded-full h-16 w-16'></div>
+              <p className='font-sedgwick text-slate-200'>Volume</p>
             </div>
             <div className='w-2/4 p-2'>
               <div className='bg-black h-full rounded-md'>
@@ -29,7 +29,7 @@ export const Main = () => {
               </div>
             </div>
             <div className='flex items-center justify-center w-1/4'>
-              <div className='border-2 border-black bg-zinc-600 rounded-full h-16 w-16'></div>
+              <p className='font-sedgwick text-slate-200'>Mode</p>
             </div>
           </div>
           <div className='flex justify-center w-full h-2/4'>
