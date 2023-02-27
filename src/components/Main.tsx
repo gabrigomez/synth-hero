@@ -18,13 +18,13 @@ export const Main = () => {
             </div>
             <div className='w-2/4 p-2'>
               <div className='bg-black h-full rounded-md'>
-                <p className='text-cyan-600 h-2/4 pt-1 text-sm'>
+                <p className='text-slate-200 h-2/4 pt-1 text-sm'>
                   PRESETS
                 </p>
                 <div className='flex justify-center p-1 h-2/4'>
-                  <GiPianoKeys className='text-cyan-600 w-1/3 h-4' />
-                  <FaDrumSteelpan className='text-cyan-600 w-1/3 h-4' />
-                  <FaGuitar className='text-cyan-600 w-1/3 h-4' />
+                  <GiPianoKeys className='text-slate-500 w-1/3 h-4' />
+                  <FaDrumSteelpan className='text-slate-500 w-1/3 h-4' />
+                  <FaGuitar className='text-slate-500 w-1/3 h-4' />
                 </div>
               </div>
             </div>
