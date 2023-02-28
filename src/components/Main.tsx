@@ -3,7 +3,7 @@ import { GiPianoKeys } from "react-icons/gi";
 import { FaDrumSteelpan } from "react-icons/fa";
 import { FaGuitar } from "react-icons/fa";
 
-import { C4, D4, Db4, E4, Eb4, playNote } from '../utils/Notes';
+import { A4, Ab4, B4, Bb4, C4, C5, D4, D5, Db4, Db5, E4, E5, Eb4, Eb5, F4, G4, Gb4, playNote } from '../utils/Notes';
 
 export const Main = () => {
   return (
@@ -52,40 +52,40 @@ export const Main = () => {
                 <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E4)}>
                   D
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(F4)}>
                   F
                 </li>
-                <li className='black-keys left-[90px] sm:left-[120px]'>
+                <li className='black-keys left-[90px] sm:left-[120px]' onClick={()=> playNote(Gb4)}>
                   T
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(G4)}>
                   G
                 </li>
-                <li className='black-keys left-[114px] sm:left-[152px]'>
+                <li className='black-keys left-[114px] sm:left-[152px]' onClick={()=> playNote(Ab4)}>
                   Y
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(A4)}>
                   H
                 </li>
-                <li className='black-keys left-[138px] sm:left-[184px]'>
+                <li className='black-keys left-[138px] sm:left-[184px]' onClick={()=> playNote(Bb4)}>
                   U
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(B4)}>
                   J
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(C5)}>
                   K
                 </li>
-                <li className='black-keys left-[186px] sm:left-[248px]'>
+                <li className='black-keys left-[186px] sm:left-[248px]' onClick={()=> playNote(Db5)}>
                   O
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D5)}>
                   L
                 </li>
-                <li className='black-keys left-[210px] sm:left-[280px]'>
+                <li className='black-keys left-[210px] sm:left-[280px]' onClick={()=> playNote(Eb5)}>
                   P
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]'>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E5)}>
                   Ç
                 </li>
               </ul>
