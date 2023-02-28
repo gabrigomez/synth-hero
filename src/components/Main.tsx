@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { GiPianoKeys } from "react-icons/gi";
 import { FaDrumSteelpan } from "react-icons/fa";
 import { FaGuitar } from "react-icons/fa";
@@ -6,6 +6,51 @@ import { FaGuitar } from "react-icons/fa";
 import { A4, Ab4, B4, Bb4, C4, C5, D4, D5, Db4, Db5, E4, E5, Eb4, Eb5, F4, G4, Gb4, playNote } from '../utils/Notes';
 
 export const Main = () => {
+  const [volume, setVolume] = useState<number>(50);
+  const [decimalVolume, setDecimalVolume] = useState<number>(volume/100);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => { 
+    setVolume(parseInt(e.target.value));
+    setDecimalVolume(volume/100);
+  }  
+
+  window.addEventListener("keydown", ({ key }) => {
+    if(key === 'a') return playNote(C4, decimalVolume);
+  
+    if(key === 'w') return playNote(Db4, decimalVolume);
+  
+    if(key === 's') return playNote(D4, decimalVolume);
+  
+    if(key === 'e') return playNote(Eb4, decimalVolume);
+  
+    if(key === 'd') return playNote(E4, decimalVolume);
+  
+    if(key === 'f') return playNote(F4, decimalVolume);
+  
+    if(key === 't') return playNote(Gb4, decimalVolume);
+  
+    if(key === 'g') return playNote(G4, decimalVolume);
+  
+    if(key === 'y') return playNote(Ab4, decimalVolume);
+  
+    if(key === 'h') return playNote(A4, decimalVolume);
+  
+    if(key === 'u') return playNote(Bb4, decimalVolume);
+  
+    if(key === 'j') return playNote(B4, decimalVolume);
+  
+    if(key === 'k') return playNote(C5, decimalVolume);
+  
+    if(key === 'o') return playNote(Db5, decimalVolume);
+  
+    if(key === 'l') return playNote(D5, decimalVolume);
+  
+    if(key === 'p') return playNote(Eb5, decimalVolume);
+  
+    if(key === 'ç') return playNote(E5, decimalVolume);
+  
+  });
+
   return (
     <div className='flex flex-col h-2/4 justify-around items-center'>
       <div className='font-sedgwick text-6xl'>
@@ -15,8 +60,11 @@ export const Main = () => {
         <div className='h-6 bg-zinc-900 rounded-t-xl'></div>
         <div className='flex flex-col h-[200px]'>
           <div className='flex h-2/4 p-2 w-full'>
-            <div className='flex items-center justify-center w-1/4'>
-              <p className='font-sedgwick text-slate-200'>Volume</p>
+            <div className='flex flex-col items-center justify-center w-1/4'>
+              <p className='font-sedgwick text-slate-200'>
+                Volume
+              </p>
+              <input id="volume" type="range" value={volume} onChange={(e) => handleChange(e)} className='w-4/5' />
             </div>
             <div className='w-2/4 p-2'>
               <div className='bg-black h-full rounded-md'>
@@ -31,61 +79,63 @@ export const Main = () => {
               </div>
             </div>
             <div className='flex items-center justify-center w-1/4'>
-              <p className='font-sedgwick text-slate-200'>Mode</p>
+              <p className='font-sedgwick text-slate-200'>
+                Mode
+              </p>
             </div>
           </div>
           <div className='flex justify-center w-full h-2/4'>
             <div className='flex items-center justify-center bg-black rounded-md w-full h-full'>
               <ul className='flex relative bg-white w-10/12 h-5/6'>
-                <li className='white-keys w-[10%]' onClick={()=> playNote(C4)}>                  
+                <li className='white-keys w-[10%]' onClick={()=> playNote(C4, decimalVolume)}>                  
                   A                  
                 </li>                
-                <li className='black-keys left-[18px] sm:left-[24px]' onClick={()=> playNote(Db4)}>
+                <li className='black-keys left-[18px] sm:left-[24px]' onClick={()=> playNote(Db4, decimalVolume)}>
                   W                  
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D4, decimalVolume)}>
                   S                  
                 </li>
-                <li className='black-keys left-[42px] sm:left-[56px]' onClick={()=> playNote(Eb4)}>
+                <li className='black-keys left-[42px] sm:left-[56px]' onClick={()=> playNote(Eb4, decimalVolume)}>
                   E                  
                 </li>                
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E4, decimalVolume)}>
                   D
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(F4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(F4, decimalVolume)}>
                   F
                 </li>
-                <li className='black-keys left-[90px] sm:left-[120px]' onClick={()=> playNote(Gb4)}>
+                <li className='black-keys left-[90px] sm:left-[120px]' onClick={()=> playNote(Gb4, decimalVolume)}>
                   T
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(G4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(G4, decimalVolume)}>
                   G
                 </li>
-                <li className='black-keys left-[114px] sm:left-[152px]' onClick={()=> playNote(Ab4)}>
+                <li className='black-keys left-[114px] sm:left-[152px]' onClick={()=> playNote(Ab4, decimalVolume)}>
                   Y
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(A4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(A4, decimalVolume)}>
                   H
                 </li>
-                <li className='black-keys left-[138px] sm:left-[184px]' onClick={()=> playNote(Bb4)}>
+                <li className='black-keys left-[138px] sm:left-[184px]' onClick={()=> playNote(Bb4, decimalVolume)}>
                   U
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(B4)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(B4, decimalVolume)}>
                   J
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(C5)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(C5, decimalVolume)}>
                   K
                 </li>
-                <li className='black-keys left-[186px] sm:left-[248px]' onClick={()=> playNote(Db5)}>
+                <li className='black-keys left-[186px] sm:left-[248px]' onClick={()=> playNote(Db5, decimalVolume)}>
                   O
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D5)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D5, decimalVolume)}>
                   L
                 </li>
-                <li className='black-keys left-[210px] sm:left-[280px]' onClick={()=> playNote(Eb5)}>
+                <li className='black-keys left-[210px] sm:left-[280px]' onClick={()=> playNote(Eb5, decimalVolume)}>
                   P
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E5)}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E5, decimalVolume)}>
                   Ç
                 </li>
               </ul>
