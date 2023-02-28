@@ -1,10 +1,9 @@
 import * as React from 'react';
-
 import { GiPianoKeys } from "react-icons/gi";
 import { FaDrumSteelpan } from "react-icons/fa";
 import { FaGuitar } from "react-icons/fa";
 
-import { playC4, playDb4, playD4, playE4, playEb4 } from '../utils/Notes';
+import { C4, D4, Db4, E4, Eb4, playNote } from '../utils/Notes';
 
 export const Main = () => {
   return (
@@ -38,19 +37,19 @@ export const Main = () => {
           <div className='flex justify-center w-full h-2/4'>
             <div className='flex items-center justify-center bg-black rounded-md w-full h-full'>
               <ul className='flex relative bg-white w-10/12 h-5/6'>
-                <li className='white-keys w-[10%]' onClick={()=> playC4()}>                  
+                <li className='white-keys w-[10%]' onClick={()=> playNote(C4)}>                  
                   A                  
                 </li>                
-                <li className='black-keys left-[18px] sm:left-[24px]' onClick={()=> playDb4()}>
+                <li className='black-keys left-[18px] sm:left-[24px]' onClick={()=> playNote(Db4)}>
                   W                  
                 </li>
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playD4()}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(D4)}>
                   S                  
                 </li>
-                <li className='black-keys left-[42px] sm:left-[56px]' onClick={()=> playEb4()}>
+                <li className='black-keys left-[42px] sm:left-[56px]' onClick={()=> playNote(Eb4)}>
                   E                  
                 </li>                
-                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playE4()}>
+                <li className='white-keys border border-gray-100 w-[10%]' onClick={()=> playNote(E4)}>
                   D
                 </li>
                 <li className='white-keys border border-gray-100 w-[10%]'>
