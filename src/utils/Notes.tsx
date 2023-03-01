@@ -16,16 +16,9 @@ import D5 from '../sounds/D5.mp3';
 import Eb5 from '../sounds/Eb5.mp3';
 import E5 from '../sounds/E5.wav';
 
-export const playNote = (note: string, volume:number) => {
-  if(note === E5) { //fix the difference of volume between the notes
-    const audio = new Audio(note);
-    audio.volume = volume - 0.3;
-    audio.play();
-  } else {
-    const audio = new Audio(note);
-    audio.volume = volume;
-    audio.play();
-  }
+export const playNote = (note: string, volume?:number) => {
+  const audio = new Audio(note);
+  audio.play();  
 };
 
 export { C4, Db4, D4, Eb4, E4, F4, Gb4, G4, Ab4, A4, Bb4, B4, C5, Db5, D5, Eb5, E5 }
