@@ -13,7 +13,6 @@ export const Main = () => {
 
   document.addEventListener("keyup", ({ key }) => {
     if(key === 'a') {
-      console.log('chamou')
       return playNote(C4)
     };
   
