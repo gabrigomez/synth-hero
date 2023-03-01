@@ -51,6 +51,21 @@ export const Main = () => {
   
   });
 
+  // const pianoKeys: NodeListOf<HTMLElement> = document.querySelectorAll(".piano-keys .key");
+  // pianoKeys.forEach((key) => {
+  //   key.addEventListener("click", () => {
+  //     const index = key.dataset.key!
+  //     playNote(note[index as keyof typeof note], decimalVolume)
+  //     console.log('clicou caralho');
+  //   })
+  // })
+
+  // pianoKeys.forEach((key) => {
+  //   key.addEventListener("click", () => play(key.dataset.key))
+  // })
+
+  // const pianoKeys: NodeListOf<HTMLElement> = document.querySelectorAll(".piano-keys .key");
+
   return (
     <div className='flex flex-col h-2/4 justify-around items-center'>
       <div className='font-sedgwick text-6xl'>
