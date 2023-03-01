@@ -12,10 +12,10 @@ export const Main = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => { 
     setVolume(parseInt(e.target.value));
     setDecimalVolume(volume/100);
-  }  
+  }
 
-  window.addEventListener("keydown", ({ key }) => {
-    if(key === 'a') return playNote(C4, decimalVolume);
+  document.addEventListener("keyup", ({ key }) => {
+    if(key === 'a') return playNote(C4, .4);
   
     if(key === 'w') return playNote(Db4, decimalVolume);
   
@@ -76,10 +76,10 @@ export const Main = () => {
         <div className='flex flex-col h-[200px]'>
           <div className='flex h-2/4 p-2 w-full'>
             <div className='flex flex-col items-center justify-center w-1/4'>
-              <p className='font-sedgwick text-slate-200'>
+              {/* <p className='font-sedgwick text-slate-200'>
                 Volume
               </p>
-              <input id="volume" type="range" value={volume} onChange={(e) => handleChange(e)} className='w-4/5' />
+              <input id="volume" type="range" value={volume} onChange={(e) => handleChange(e)} className='w-4/5' /> */}
             </div>
             <div className='w-2/4 p-2'>
               <div className='bg-black h-full rounded-md'>
