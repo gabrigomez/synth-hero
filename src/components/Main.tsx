@@ -11,11 +11,19 @@ export const Main = () => {
   });
 
   const playNoteHandler = (event: any) => {
-    if(event.key) {
-      playNote(noteMap[event.key as keyof typeof noteMap]); //play the note according with the noteMap object
+    if(event.key) {                         
+      if(event.key === 'ç') {
+        playNote(noteMap[event.key as keyof typeof noteMap], 0.2); //play the note according with the noteMap object
+      } else {
+        playNote(noteMap[event.key as keyof typeof noteMap]);
+      }
     } else {
       const note = event.toLowerCase();
-      playNote(noteMap[note as keyof typeof noteMap]);
+      if (note === 'ç') {
+        playNote(noteMap[note as keyof typeof noteMap], 0.2);
+      } else {
+        playNote(noteMap[note as keyof typeof noteMap]);
+      }
     };
   };
 
