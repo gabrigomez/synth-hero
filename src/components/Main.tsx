@@ -11,16 +11,16 @@ export const Main = () => {
   });
 
   const playNoteHandler = (event: any) => {
-    if(event.key) {                         
+    if(event.key) { //keyboard                          
       if(event.key === 'ç') {
-        playNote(noteMap[event.key as keyof typeof noteMap], 0.2); //play the note according with the noteMap object
-      } else {
+        playNote(noteMap[event.key as keyof typeof noteMap], 0.2); //conditional to fix the difference of volume in last key 
+      } else {                                                     //since i took the audio from different sources :(
         playNote(noteMap[event.key as keyof typeof noteMap]);
       }
-    } else {
+    } else {  //mouse click           
       const note = event.toLowerCase();
       if (note === 'ç') {
-        playNote(noteMap[note as keyof typeof noteMap], 0.2);
+        playNote(noteMap[note as keyof typeof noteMap], 0.2); //play the note according with the noteMap object  
       } else {
         playNote(noteMap[note as keyof typeof noteMap]);
       }
