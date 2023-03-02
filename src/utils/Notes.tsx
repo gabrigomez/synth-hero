@@ -21,4 +21,24 @@ export const playNote = (note: string, volume?:number) => {
   audio.play();  
 };
 
-export { C4, Db4, D4, Eb4, E4, F4, Gb4, G4, Ab4, A4, Bb4, B4, C5, Db5, D5, Eb5, E5 }
+const noteMap = {
+  a: C4,
+  w: Db4,
+  s: D4,
+  e: Eb4,
+  d: E4,
+  f: F4,
+  t: Gb4,
+  g: G4,
+  y: Ab4,
+  h: A4,
+  u: Bb4,
+  j: B4,
+  k: C5,
+  o: Db5,
+  l: D5,
+  p: Eb5,
+  ç: E5
+}
+
+export { C4, Db4, D4, Eb4, E4, F4, Gb4, G4, Ab4, A4, Bb4, B4, C5, Db5, D5, Eb5, E5, noteMap }
