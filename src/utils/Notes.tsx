@@ -16,8 +16,9 @@ import D5 from '../sounds/D5.mp3';
 import Eb5 from '../sounds/Eb5.mp3';
 import E5 from '../sounds/E5.wav';
 
-export const playNote = (note: string, volume?:number) => {
+export const playNote = (note: string, volume: number = 0.5) => {
   const audio = new Audio(note);
+  audio.volume = volume;
   audio.play();  
 };
 

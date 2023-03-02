@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GiPianoKeys } from "react-icons/gi";
 import { FaDrumSteelpan } from "react-icons/fa";
 import { FaGuitar } from "react-icons/fa";
@@ -6,23 +6,18 @@ import { FaGuitar } from "react-icons/fa";
 import { noteMap, playNote } from '../utils/Notes';
 
 export const Main = () => {
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => { 
-  //   setVolume(parseInt(e.target.value));
-  //   setDecimalVolume(volume/100);
-  // }
-
   useEffect(() => {
     document.addEventListener('keydown', handleNote, true);
-  }, [])
+  });
 
   const handleNote = (event: any) => {
     playNote(noteMap[event.key as keyof typeof noteMap])  //play the note according with the noteMap object
-  }
+  };
 
-  const playNoteOnClick = (event:any) => {
+  const playNoteOnClick = (event: any) => {
     const note = event.toLowerCase()
     playNote(noteMap[note as keyof typeof noteMap])
-  }
+  };
 
   return (
     <div className='flex flex-col h-2/4 justify-around items-center'>
@@ -36,8 +31,7 @@ export const Main = () => {
             <div className='flex flex-col items-center justify-center w-1/4'>
               {/* <p className='font-sedgwick text-slate-200'>
                 Volume
-              </p>
-              <input id="volume" type="range" value={volume} onChange={(e) => handleChange(e)} className='w-4/5' /> */}              
+              </p>                             */}
             </div>
             <div className='w-2/4 p-2'>
               <div className='bg-black h-full rounded-md'>
@@ -117,5 +111,5 @@ export const Main = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
